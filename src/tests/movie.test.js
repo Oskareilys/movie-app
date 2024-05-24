@@ -57,7 +57,7 @@ test('POST /movies/:id/actors debe asignarle actores a una pelicula', async() =>
         lastName: "DiCaprio",
         nationality:"Estadounidense",
         image:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Leonardo_DiCaprio_in_2023_%28cropped%29.png/330px-Leonardo_DiCaprio_in_2023_%28cropped%29.png",
-        birthday:"1974/11/11"
+        birthday:"1974-11-11"
     } );
     
     
@@ -75,7 +75,7 @@ test('POST /movies/:id/directors debe asignarle directores a una pelicula', asyn
         lastName: "Nolan",
         nationality:"Estadounidense",
         image:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Christopher_Nolan_Cannes_2018.jpg/330px-Christopher_Nolan_Cannes_2018.jpg",
-        birthday:"1970/07/30"
+        birthday:"1970-07-30"
     } );
      const res = await request(app).post(`/movies/${id}/directors`).send([director.id]);
      await director.destroy();

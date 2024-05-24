@@ -16,7 +16,7 @@ test('POST /actors debe crear un actor', async() => {
         lastName: "DiCaprio",
         nationality:"Estadounidense",
         image:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Leonardo_DiCaprio_in_2023_%28cropped%29.png/330px-Leonardo_DiCaprio_in_2023_%28cropped%29.png",
-        birthday:"1974/11/11"
+        birthday:"1974-11-11"
     } 
     const res = await request(app).post('/actors').send(actor);
     id = res.body.id;
